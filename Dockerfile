@@ -1,7 +1,7 @@
 FROM node:8
-WORKDIR /usr/src/app
-COPY package*.json ./
+WORKDIR /app
+COPY . /app
 RUN npm install
 COPY . .
-EXPOSE 3000
+EXPOSE 80
 CMD ["npm", "start"]
