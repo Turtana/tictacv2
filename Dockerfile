@@ -1,7 +1,11 @@
 FROM node:8
 WORKDIR /app
 COPY . /app
+# Install dependencies
 RUN npm install
+# Copy stuff
 COPY . .
+# Expose port
 EXPOSE 80
-CMD ["node", "server.js"]
+# Launh app
+CMD ["npm", "start"]
