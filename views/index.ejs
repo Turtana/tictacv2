@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ristinolla</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+      <h1>RISTINOLLA</h1>
+
+      <!-- This invisible block carries the message from Express to Vue -->
+      <p id="bmessage"><%= passBoard %></p>
+
+      <div class="mainblock">
+
+        <table id="vueboard">
+                <tr>
+                <td><button type="button" id="00" onclick="move(this.id)">{{ board[0][0] }}</button></td>
+                <td><button type="button" id="01" onclick="move(this.id)">{{ board[0][1] }}</button></td>
+                <td><button type="button" id="02" onclick="move(this.id)">{{ board[0][2] }}</button></td>
+                </tr>
+                <tr>
+                <td><button type="button" id="10" onclick="move(this.id)">{{ board[1][0] }}</button></td>
+                <td><button type="button" id="11" onclick="move(this.id)">{{ board[1][1] }}</button></td>
+                <td><button type="button" id="12" onclick="move(this.id)">{{ board[1][2] }}</button></td>
+                </tr>
+                <tr>
+                <td><button type="button" id="20" onclick="move(this.id)">{{ board[2][0] }}</button></td>
+                <td><button type="button" id="21" onclick="move(this.id)">{{ board[2][1] }}</button></td>
+                <td><button type="button" id="22" onclick="move(this.id)">{{ board[2][2] }}</button></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><button type="button" id="skip" onclick="skipTurn()">SKIPPAA VUORO</button></td>
+                </tr>
+        </table>
+    
+      </div>
+
+      <div class="mainblock">
+
+        <h2 id="info">Infoteksti</h2>
+        
+        <div class="resetdiv">
+            <button type="button" onclick="saveToMemory()" id="reset">TALLENNA</button>
+        </div>
+        <div class="resetdiv">
+            <button type="button" onclick="reset()" id="reset">TYHJENNÄ</button>
+        </div>
+
+      </div>
+
+      <script src="/js/tictac.js"></script>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+table {
+    margin: auto;
+}
+
+button {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border: 2px solid black;
+    text-align: center;
+    font-family: Arial;
+    font-size: 28px;
+    font-weight: bold;
+    background: #FFFFFF;
+}
+
+button:hover {
+    background-color: #FFBBBB;
+}
+
+body {
+    background-color: teal;
+}
+
+h1, h2 {
+    width: 200px;
+    height: 100px;
+    font-family: arial;
+    font-size: 28;
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px #000000;
+}
+
+.mainblock {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+.resetdiv {
+    text-align: center;
+}
+
+#reset {
+    font-size: 24;
+    width: 200px;
+    background-color: red;
+    color: white;
+}
+
+#reset:hover {
+    background-color: #FF3333;
+}
+
+#skip {
+    font-size: 24;
+    width: 348px;
+    background: #FFFF00;
+}
+
+#skip:hover {
+    background: #ffff55;
+}
+
+#bmessage {
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    .mainblock {
+        float: none;
+        width: 100%;
+    }
+}
